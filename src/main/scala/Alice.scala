@@ -6,7 +6,6 @@ object Alice {
   def main(args: Array[String]) {
         val conf = new SparkConf().setAppName("My App")
         val sc = new SparkContext(conf)
-    //  val input = sc.textFile("rnd.txt"
         val input = sc.textFile("Alice.txt")
         val words = input.flatMap(line => line.split(" "))
         val start = System.nanoTime
